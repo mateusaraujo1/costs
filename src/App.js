@@ -5,6 +5,9 @@ import Contact from './components/pages/Contact';
 import NewProject from './components/pages/NewProject';
 
 
+import Container from './components/layout/Container';
+
+
 function App() {
   return (
     <Router>
@@ -16,12 +19,14 @@ function App() {
         <Link to="/newproject">New Project</Link>
       </div>
 
-      <Routes>
-        <Route path= "/" element={<Home/>}/> 
-        <Route path= "/Company" element={<Company/>}/> 
-        <Route path= "/Contact" element={<Contact/>}/> 
-        <Route path= "/NewProject" element={<NewProject/>}/>    
-      </Routes>
+      <Container customClass="min-height">
+        <Routes>
+          <Route path= "/" element={<Home/>}/> 
+          <Route path= "/Company" element={<Company/>}/> 
+          <Route path= "/Contact" element={<Contact/>}/> 
+          <Route path= "/NewProject" element={<NewProject/>}/>
+        </Routes>
+      </Container> 
 
       <p>Footer</p>
 
